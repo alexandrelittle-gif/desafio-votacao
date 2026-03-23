@@ -32,9 +32,9 @@ mvn spring-boot:run
 - `GET /api/v1.0/associados`
 
 ### Votação
-- `POST /api/v1.0/pautas/{pautaId}/votacoes`
-- `POST /api/v1.0/pautas/{pautaId}/votos`
-- `GET /api/v1.0/pautas/{pautaId}/resultado`
+- `POST /api/v1.0/pautas/{pautaId}/votacao`
+- `POST /api/v1.0/pautas/{pautaId}/voto`
+- `GET /api/v1.0/pautas/{pautaId}/apuracao`
 
 ## Exemplos
 
@@ -62,7 +62,7 @@ mvn spring-boot:run
 ### Votar
 ```json
 {
-  "associadoId": 1,
+  "idAssociado": 1,
   "voto": "SIM"
 }
 ```
