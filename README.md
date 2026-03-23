@@ -14,13 +14,6 @@ API REST para cadastro de pautas, abertura de sessões de votação, recebimento
 - Springdoc OpenAPI
 - JUnit 5 / Mockito
 
-## Como rodar
-
-```bash
-docker compose up -d
-mvn spring-boot:run
-```
-
 ## Endpoints
 
 ### Pautas
