@@ -27,7 +27,6 @@ import com.desafio.votacao.model.Pauta;
 import com.desafio.votacao.model.Votacao;
 import com.desafio.votacao.repository.VotacaoRepository;
 import com.desafio.votacao.repository.VotoRepository;
-import com.github.dockerjava.api.exception.ConflictException;
 
 @ExtendWith(MockitoExtension.class)
 class VotacaoServiceTest {
@@ -81,7 +80,7 @@ class VotacaoServiceTest {
 		when(cpfVoteEligibilityClient.check("52998224725")).thenReturn(new CpfVoteEligibilityResult("ABLE_TO_VOTE"));
 		when(votoRepository.existsByVotacaoIdAndAssociadoId(3L, 1L)).thenReturn(true);
 
-		assertThrows(ConflictException.class, () -> votacaoService.votar(1L, new VotoRequest(1L, "SIM")));
+		assertThrows(BusinessException.class, () -> votacaoService.votar(1L, new VotoRequest(1L, "SIM")));
 		verify(votoRepository, never()).persist(any());
 	}
 
