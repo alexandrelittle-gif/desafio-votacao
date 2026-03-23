@@ -1,75 +1,140 @@
 {
-	"info": {
-		"_postman_id": "f6b3fe61-cee1-4e55-8312-81d7f185a465",
-		"name": "desafio",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "21828722"
-	},
-	"item": [
-		{
-			"name": "criar_associado",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "criar_pauta",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "abrir_votacao",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "votar",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"idVotacao\": 1,\r\n    \"idAssociado\": 1, \r\n    \"resposta\": \"Não\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/api/v1.0/votacao/votar",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"v1.0",
-						"votacao",
-						"votar"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "apuracao",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "f6b3fe61-cee1-4e55-8312-81d7f185a465",
+    "name": "desafio",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21828722"
+  },
+  "item": [
+    {
+      "name": "criar_associado",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cpf\": \"12345678914\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1.0/associados",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1.0",
+            "associados"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "criar_pauta",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"descricao\": \"Teste Pauta 01\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1.0/pautas",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1.0",
+            "pautas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "abrir_votacao",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"duracaoMinutos\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1.0/pautas/1/votacao",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1.0",
+            "pautas",
+            "1",
+            "votacao"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "votar",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"idVotacao\": 1,\r\n    \"idAssociado\": 1, \r\n    \"resposta\": \"Não\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1.0/votacao/votar",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1.0",
+            "votacao",
+            "votar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "apuracao",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
 }
