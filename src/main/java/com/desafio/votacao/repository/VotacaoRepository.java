@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.Query;
 
 import com.desafio.votacao.dto.ApuracaoResponse;
-import com.desafio.votacao.model.Associado;
 import com.desafio.votacao.model.Votacao;
 
 import io.hypersistence.utils.spring.repository.BaseJpaRepository;
